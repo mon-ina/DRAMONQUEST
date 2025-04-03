@@ -1,0 +1,95 @@
+  <!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドラモンクエスト【戦闘】</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="battleScreen" class="screen">
+      <!-- 敵 -->
+      <div class="enemy">
+        <img id="enemyImage" src="" alt="敵キャラ" class="character">
+        <div class="hp-bar">
+          <div class="hp" id="enemyHp"></div>
+        </div>
+      </div>
+
+      <!-- 味方 -->
+      <div class="party">
+        <div class="ally" data-name="キャラクター1">
+          <div class="character-arrow">▼</div>
+          <img id="ally1Image" src="" alt="味方キャラ1" class="character">
+          <div class="hp-bar">
+            <div class="hp" id="ally1Hp"></div>
+            <div class="ally1HpNum" id="ally1HpNum"><p>100/100</p></div>
+          </div>
+          <div class="mp-bar">
+            <div class="mp" id="ally1Mp"></div>
+            <div class="ally1MpNum" id="ally1MpNum"><p>100/100</p></div>
+          </div>
+        </div>
+
+        <div class="ally" data-name="キャラクター2">
+          <div class="character-arrow">▼</div>
+          <img id="ally2Image" src="" alt="味方キャラ2" class="character">
+          <div class="hp-bar">
+            <div class="hp" id="ally2Hp"></div>
+            <div class="ally2HpNum" id="ally2HpNum"><p>100/100</p></div>
+          </div>
+          <div class="mp-bar">
+            <div class="mp" id="ally2Mp"></div>
+            <div class="ally2MpNum" id="ally2MpNum"><p>100/100</p></div>
+          </div>
+        </div>
+
+        <div class="ally" data-name="キャラクター3">
+          <div class="character-arrow">▼</div>
+          <img id="ally3Image" src="" alt="味方キャラ3" class="character">
+          <div class="hp-bar">
+            <div class="hp" id="ally3Hp"></div>
+            <div class="ally3HpNum" id="ally3HpNum"><p>100/100</p></div>
+          </div>
+          <div class="mp-bar">
+            <div class="mp" id="ally3Mp"></div>
+            <div class="ally3MpNum" id="ally3MpNum"><p>100/100</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- テキスト表示エリア -->
+      <div id="textArea" class="text-area"></div>
+      <div id="tooltip" class="tooltip"></div>
+
+      <!-- 選択肢表示エリア -->
+      <div id="buttonAll">
+            <audio id="soundClick" src="./bgm/nc395514_ピッ・カーソル音・某名作RPGの音.wav"></audio>
+        <div id="options" class="options hidden"></div>
+      </div>
+
+      <audio id="attackSound" src="./bgm/nc254908_【ドラクエ】_攻撃_効果音.mp3"></audio>
+
+      <audio id="damageSound" src="./bgm/nc80983_FCドラクエ効果音（敵に攻撃を与えた時の音）.wav"></audio>
+
+      <audio id="superattackSound" src="./bgm/nc85184_ドラクエの呪文使用時の効果音.wav"></audio>
+      
+      <audio id="recoverySound" src="./bgm/nc85814_ドラクエ_-_回復時の効果音.wav"></audio>
+      
+      <audio id="chargeSound" src="./bgm/nc392370_【効果音】能力向上・バフ・その３.mp3"></audio>
+      <audio id="debuffSound" src="./bgm/nc392803_【効果音】能力低下・デバフ・その３.mp3"></audio>
+      
+      <audio id="enemyattackSound" src="./bgm/nc255072_【ドラクエ】_会心の一撃_効果音.mp3"></audio>
+
+      <audio id="loseSound" src="./bgm/nc179247__【高音質】ドラクエ___全滅___効果音.wav"></audio>
+
+      <audio id="winSound" src="./bgm/勝利.mp3"></audio>
+
+      <audio id="bgm" src="./bgm/DQ4BGM.mp3" loop autoplay></audio>
+    </div>
+
+
+    <script src="script.js"></script>
+    <!-- <script src="arrow.js"></script> -->
+  </body>
+  </html>
