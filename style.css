@@ -22,13 +22,15 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 10%;
+  top: 4%;
 }
 .enemy img {
-  width: 330px;
+  width: 120%;
   height: auto;
 }
-
+.enemy .hp-bar {
+  margin-top: -5%;
+}
 .party {
   display: flex;
   justify-content: space-around;
@@ -147,7 +149,7 @@ body {
 
 .text-area {
   position: fixed;
-  bottom: 107px;
+  bottom: 13%;
   width: 100%;
   text-align: center;
   padding: 10px;
