@@ -103,7 +103,6 @@ console.log(arrows);
 
 //矢印関数
 function updateCharacterSelection() {
-  console.log("none");
 
   // すべての矢印を非表示
   document.querySelectorAll(".character-arrow").forEach(arrow => arrow.style.display = 'none');
@@ -757,16 +756,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
   document.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
           const playPromise = bgm.play();
-          if (playPromise !== undefined) {
-              playPromise.then(() => {
-                  console.log("BGM is playing");
-              }).catch(error => {
-                  console.log("BGM auto-play was prevented. Handling accordingly.");
-              });
-          }
       }
   });
 });
+
 
 
 
