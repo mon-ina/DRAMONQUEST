@@ -195,6 +195,7 @@ function updateMpBar(character) {
   }
 }
 
+//チャージ状態のキャラをスキップする条件
 function isChargingAndNotReady(ally) {
   return ally.name === "勇者" && ally.specialSkill.isCharging && !ally.specialSkill.isReadyToAttack;
 }
@@ -637,10 +638,6 @@ function performAction(ally) {
   });
 }
 
-function isChargingAndNotReady(ally) {
-  return ally.name === "勇者" && ally.specialSkill.isCharging && !ally.specialSkill.isReadyToAttack;
-}
-
 
 // 魔王の行動
 function executeEnemyAction() {
@@ -750,14 +747,11 @@ function stopBGM() {
   }
 }
 //bgm
-document.addEventListener('DOMContentLoaded', (event) => {
-  const bgm = document.getElementById('bgm');
-
-  document.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter') {
-          const playPromise = bgm.play();
-      }
-  });
+const bgm = document.getElementById('bgm');
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const playPromise = bgm.play();
+    }
 });
 
 
